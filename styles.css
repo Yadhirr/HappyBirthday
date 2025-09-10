@@ -1,115 +1,17 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    overflow: hidden;
-}
-
-.card-container {
-    perspective: 1000px;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* centers horizontally */
+  justify-content: flex-start; /* aligns to the top */
 }
 
 .card {
-    width: 300px;
-    height: 400px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
-    cursor: pointer;
-    position: middle;
-}
-
-.card.flipped {
-    transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    box-sizing: border-box;
-    color: #fff;
-}
-
-.card-front {
-    background: linear-gradient(to bottom right, #a18cd1, #fbc2eb);
-    text-align: center;
-}
-
-.card-front h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.card-front p {
-    font-size: 1.2em;
-}
-
-.card-back {
-    background: linear-gradient(to top left, #84fab0, #8fd3f4);
-    transform: rotateY(180deg);
-    text-align: center;
-    
-}
-
-.card-back h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-.card-back p {
-    font-size: 1em;
-    line-height: 1.5;
-    
-}
-
-.card-back .signature {
-    margin-top: 20px;
-    font-style: italic;
-    font-size: 1.1em;
-}
-
-#confettiBtn {
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-#confettiBtn:hover {
-    background-color: #e63946;
-}
-
-/* Confetti animation (basic example) */
-@keyframes confetti-fall {
-    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-}
-
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #ffd700; /* Gold */
-    border-radius: 50%;
-    animation: confetti-fall 3s forwards;
-    opacity: 0;
-
+  margin-top: 40px; /* optional: space from the very top */
+  width: 300px;     /* example width */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
 }
